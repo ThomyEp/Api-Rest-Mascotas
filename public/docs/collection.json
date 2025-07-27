@@ -1,0 +1,1419 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "127.0.0.1"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "dc7c5216-33cf-487c-9382-8530b08d7dfa",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Return an empty response simply to trigger the storage of the CSRF cookie in the browser.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "sanctum\/csrf-cookie",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/sanctum\/csrf-cookie"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Registrar nuevo usuario",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/register",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Juan Perez\",\n    \"email\": \"juan@example.com\",\n    \"password\": \"password123\",\n    \"password_confirmation\": \"password123\"\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Registrar nuevo usuario Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/register",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/auth\/register"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"name\": \"Juan Perez\",\n    \"email\": \"juan@example.com\",\n    \"password\": \"password123\",\n    \"password_confirmation\": \"password123\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Juan Perez\",\n        \"email\": \"juan@example.com\"\n    },\n    \"token\": \"jwt_token\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Iniciar sesi\u00f3n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"juan@example.com\",\n    \"password\": \"password123\"\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Iniciar sesi\u00f3n Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/login",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/auth\/login"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"juan@example.com\",\n    \"password\": \"password123\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"token\": \"jwt_token\"\n}"
+                        },
+                        {
+                            "name": "Iniciar sesi\u00f3n Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/login",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/auth\/login"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\": \"juan@example.com\",\n    \"password\": \"password123\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Credenciales inv\\u00e1lidas\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Obtener usuario autenticado",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/me",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/me"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Obtener usuario autenticado Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/auth\/me",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/auth\/me"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"id\": 1,\n    \"name\": \"Juan Perez\",\n    \"email\": \"juan@example.com\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cerrar sesi\u00f3n",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Cerrar sesi\u00f3n Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/logout",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/logout"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Sessi\\u00f3n cerrada correctamente\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/private",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/private",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/private"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "api\/private Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/private",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/private"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "\/",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "\/",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "\/ Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "\/",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/\/"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Mascotas",
+            "description": "\nEndpoints para gestionar mascotas.",
+            "item": [
+                {
+                    "name": "Listar todas las mascotas",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mascotas",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/mascotas"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Devuelve una lista de todas las mascotas registradas."
+                    },
+                    "response": [
+                        {
+                            "name": "Listar todas las mascotas Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Devuelve una lista de todas las mascotas registradas."
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        },
+                        {
+                            "name": "Listar todas las mascotas Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Devuelve una lista de todas las mascotas registradas."
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"No hay mascotas registradas\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Crear una nueva mascota",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mascotas",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/mascotas"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"omnis\",\n    \"especie\": \"officiis\",\n    \"raza\": \"est\",\n    \"edad\": 20,\n    \"persona_id\": 11\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Crear una nueva mascota Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"nombre\": \"omnis\",\n    \"especie\": \"officiis\",\n    \"raza\": \"est\",\n    \"edad\": 20,\n    \"persona_id\": 11\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mostrar una mascota por ID",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mascotas\/:mascota",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                            "variable": [
+                                {
+                                    "id": "mascota",
+                                    "key": "mascota",
+                                    "value": "1",
+                                    "description": "ID de la mascota."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Mostrar una mascota por ID Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas\/:mascota",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                                    "variable": [
+                                        {
+                                            "id": "mascota",
+                                            "key": "mascota",
+                                            "value": "1",
+                                            "description": "ID de la mascota."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        },
+                        {
+                            "name": "Mostrar una mascota por ID Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas\/:mascota",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                                    "variable": [
+                                        {
+                                            "id": "mascota",
+                                            "key": "mascota",
+                                            "value": "1",
+                                            "description": "ID de la mascota."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Mascota no encontrada\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Actualizar una mascota",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mascotas\/:mascota",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                            "variable": [
+                                {
+                                    "id": "mascota",
+                                    "key": "mascota",
+                                    "value": "1",
+                                    "description": "ID de la mascota."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Max\",\n    \"especie\": \"Gato\",\n    \"edad\": 3\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Actualizar una mascota Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas\/:mascota",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                                    "variable": [
+                                        {
+                                            "id": "mascota",
+                                            "key": "mascota",
+                                            "value": "1",
+                                            "description": "ID de la mascota."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"nombre\": \"Max\",\n    \"especie\": \"Gato\",\n    \"edad\": 3\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "null"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eliminar una mascota",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mascotas\/:mascota",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                            "variable": [
+                                {
+                                    "id": "mascota",
+                                    "key": "mascota",
+                                    "value": "1",
+                                    "description": "ID de la mascota."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Eliminar una mascota Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/mascotas\/:mascota",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/mascotas\/:mascota",
+                                    "variable": [
+                                        {
+                                            "id": "mascota",
+                                            "key": "mascota",
+                                            "value": "1",
+                                            "description": "ID de la mascota."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Mascota eliminada con \\u00e9xito\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Personas",
+            "description": "\nEndpoints para gestionar personas.",
+            "item": [
+                {
+                    "name": "Listar personas",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Listar personas Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Juan P\\u00e9rez\",\n        \"ci\": \"12345678\",\n        \"email\": \"juan@example.com\",\n        \"fecha_nacimiento\": \"1990-01-01\"\n    }\n]"
+                        },
+                        {
+                            "name": "Listar personas Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"No hay personas registradas\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Registrar una nueva persona",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ci\": \"quidem\",\n    \"nombre\": \"nisi\",\n    \"email\": \"iusto\",\n    \"fecha_nacimiento\": \"consectetur\"\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Registrar una nueva persona Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"ci\": \"quidem\",\n    \"nombre\": \"nisi\",\n    \"email\": \"iusto\",\n    \"fecha_nacimiento\": \"consectetur\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"id\": 2,\n    \"nombre\": \"Mar\\u00eda L\\u00f3pez\",\n    \"ci\": \"7894561\",\n    \"email\": \"maria@example.com\",\n    \"fecha_nacimiento\": \"1995-06-23\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ver persona por ID",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas\/:persona",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                            "variable": [
+                                {
+                                    "id": "persona",
+                                    "key": "persona",
+                                    "value": "1",
+                                    "description": "ID de la persona."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Ver persona por ID Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "1",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"id\": 1,\n    \"nombre\": \"Juan P\\u00e9rez\",\n    \"ci\": \"12345678\",\n    \"email\": \"juan@example.com\",\n    \"fecha_nacimiento\": \"1990-01-01\"\n}"
+                        },
+                        {
+                            "name": "Ver persona por ID Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "1",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Persona no encontrada\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Actualizar persona",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas\/:persona",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                            "variable": [
+                                {
+                                    "id": "persona",
+                                    "key": "persona",
+                                    "value": "1",
+                                    "description": "ID de la persona."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ci\": \"et\",\n    \"nombre\": \"libero\",\n    \"email\": \"repudiandae\",\n    \"fecha_nacimiento\": \"sunt\"\n}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Actualizar persona Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "1",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"ci\": \"et\",\n    \"nombre\": \"libero\",\n    \"email\": \"repudiandae\",\n    \"fecha_nacimiento\": \"sunt\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"id\": 1,\n    \"nombre\": \"Carlos G\\u00f3mez\",\n    \"ci\": \"6543210\",\n    \"email\": \"carlos@example.com\",\n    \"fecha_nacimiento\": \"1985-10-10\"\n}"
+                        },
+                        {
+                            "name": "Actualizar persona Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "1",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"ci\": \"et\",\n    \"nombre\": \"libero\",\n    \"email\": \"repudiandae\",\n    \"fecha_nacimiento\": \"sunt\"\n}"
+                                },
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Persona no encontrada\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Eliminar persona",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas\/:persona",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                            "variable": [
+                                {
+                                    "id": "persona",
+                                    "key": "persona",
+                                    "value": "3",
+                                    "description": "ID de la persona."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Eliminar persona Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "3",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Persona eliminada con \\u00e9xito\"\n}"
+                        },
+                        {
+                            "name": "Eliminar persona Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:persona",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:persona",
+                                    "variable": [
+                                        {
+                                            "id": "persona",
+                                            "key": "persona",
+                                            "value": "3",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Persona no encontrada\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ver persona con sus mascotas",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/personas\/:id\/mascotas",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:id\/mascotas",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "ID de la persona."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Ver persona con sus mascotas Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:id\/mascotas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:id\/mascotas",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "4",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"id\": 4,\n    \"nombre\": \"Luc\\u00eda M\\u00e9ndez\",\n    \"mascotas\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Kira\",\n            \"especie\": \"Gato\"\n        }\n    ]\n}"
+                        },
+                        {
+                            "name": "Ver persona con sus mascotas Response #2",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/personas\/:id\/mascotas",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/personas\/:id\/mascotas",
+                                    "variable": [
+                                        {
+                                            "id": "id",
+                                            "key": "id",
+                                            "value": "4",
+                                            "description": "ID de la persona."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Persona no encontrada\"\n}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer"
+    }
+}

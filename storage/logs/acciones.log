@@ -1,0 +1,13 @@
+[2025-07-27 02:04:09] local.INFO: Usuario logueado {"email":"admin@example.com"} 
+[2025-07-27 02:46:22] local.INFO: Nuevo usuario registrado {"user_id":4,"email":"pthomy20@gmail.com"} 
+[2025-07-27 02:46:28] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 02:54:05] local.INFO: Nuevo usuario registrado {"user_id":5,"email":"pthomy10@gmail.com"} 
+[2025-07-27 02:54:22] local.INFO: Usuario logueado {"email":"pthomy10@gmail.com"} 
+[2025-07-27 02:59:49] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:00:08] local.INFO: Usuario cerró sessión {"user_id":4} 
+[2025-07-27 03:00:57] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:05:22] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:26:44] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:35:02] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:41:19] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
+[2025-07-27 03:45:41] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
