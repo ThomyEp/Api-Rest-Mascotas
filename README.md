@@ -62,3 +62,92 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+# API REST de Mascotas 🐾
+
+Este proyecto es una API RESTful construida con Laravel para la gestión de personas y sus mascotas. Soporta autenticación JWT y cuenta con documentación generada automáticamente.
+
+---
+
+## 🚀 Instalación y ejecución
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/ThomyEp/api-rest-mascotas.git
+cd api-rest-mascotas
+
+### 2. Instalar dependencias
+
+composer install
+npm install 
+npm run dev
+
+### 3. Copiar archivo .env y configurar
+
+cp .env.example .env
+
+APP_URL=http://127.0.0.1:8000
+DB_DATABASE= tu base
+DB_USERNAME=tu usuario
+DB_PASSWORD=tu contraseña
+
+### 4. Generar clave de aplicación y migrar , sedder con datos de prueba usuarios , personas y mascotas
+
+php artisan key:generate
+php artisan migrate --seed
+
+### 5. Iniciar servidor
+
+php artisan serve
+
+### 6. Documentacion
+### generar documentacion
+php artisan scribe:generate
+###link de la documentacion 
+http://127.0.0.1:8000/docs
+
+Endpoints principales 
+
+GET /api/auth/register → Registra usuario
+
+POST /api/auth/login → Iniciar sesión
+
+POST /api/logout → Cerrar sesión
+
+GET /api/auth/me → Obtener usuario autenticado
+
+GET /api/personas → Listar personas
+
+GET /api/personas/{id} → Ver persona por ID
+
+POST /api/personas → Registrar nueva persona
+
+PUT  /api/personas/{id} → Actualizar persona
+
+POST /api/mascotas → Registrar nueva mascota
+
+put /api/mascota/{id} → Actualizar persona
+
+GET /api/personas/{id}/mascotas → Ver mascotas de una persona
+
+GET /api/mascotas → Listar mascotas
+
+🧠 Consideraciones del desarrollador
+El proyecto sigue el patrón Service Repository.
+
+Autenticación vía JWT.
+
+Cada sessión pedita el token de autenticación para poder realziar las acciones
+
+Agregar token cuando se solicita 
+
+Uso de recursos API con API Resources de Laravel.
+
+Logs personalizados en canal acciones.
+
+Código documentado con Scribe usando anotaciones.
+
