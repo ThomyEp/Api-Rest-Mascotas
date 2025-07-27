@@ -32,6 +32,14 @@ DB_PASSWORD=tu contraseña
 php artisan key:generate
 php artisan migrate --seed
 
+Usuarios de prueba
+user: admin@example.com
+psw : admin1234
+user: juan@example.com
+psw : password123
+user: ana@example.com
+psw : secret456
+
 ### 5. Iniciar servidor
 
 php artisan serve
