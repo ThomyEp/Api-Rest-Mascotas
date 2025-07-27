@@ -18,15 +18,14 @@ class MascotaFactory extends Factory
 
     public function definition()
     {
-        return [
-            //
-            'nombre' => $this->faker->name,
-            'especie' => $this->faker->randomElement(['Perro', 'Gato', 'Loro', 'Conejo']),
+         return [
+            'nombre' => $this->faker->firstName(), // mejor usar nombre de mascota
+            'especie' => 'Gato', // solo gatos
             'raza' => $this->faker->word,
             'edad' => $this->faker->numberBetween(1, 15),
             'persona_id' => Persona::factory(), // Crea una persona asociada
             'descripcion' => $this->faker->sentence,
-            'imagen' => $this->faker->imageUrl(640, 480, 'animals', true, 'Mascota'),
+            'imagen' => $this->faker->imageUrl(640, 480, 'cats', true, 'Cat'), // imagen de gatos
         ];
     }
 }
