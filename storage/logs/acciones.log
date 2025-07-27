@@ -12,3 +12,6 @@
 [2025-07-27 03:41:19] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
 [2025-07-27 03:45:41] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 
 [2025-07-27 04:46:16] local.INFO: Usuario logueado {"email":"admin@example.com"} 
+[2025-07-27 05:21:26] local.WARNING: Intento de sesión fallido {"email":"pthomy20@gmail.com"} 
+[2025-07-27 05:21:42] local.INFO: Nuevo usuario registrado {"user_id":14,"email":"pthomy20@gmail.com"} 
+[2025-07-27 05:21:59] local.INFO: Usuario logueado {"email":"pthomy20@gmail.com"} 

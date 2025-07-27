@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\User;
 use App\Models\Persona;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -25,9 +25,7 @@ class PersonaFactory extends Factory
             'fecha_nacimiento' => $this->faker->dateTimeBetween('-50 years', '-18 years')->format('Y-m-d'),
             'created_at' => now(),
             'updated_at' => now(),
-            'user_id' => function () {
-                return \App\Models\User::factory()->create()->id; // Crea un usuario asociado
-            },
+            'user_id' => User::factory(),  // Esto crea y asigna un usuario automáticamente
             //
         ];
     }

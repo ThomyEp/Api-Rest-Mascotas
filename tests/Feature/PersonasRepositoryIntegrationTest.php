@@ -15,11 +15,14 @@ class PersonasRepositoryIntegrationTest extends TestCase
     {
         $repo = new PersonasRepository();
 
+        $user = \App\Models\User::factory()->create(); // Crear un usuario para asignar
+
         $data = [
             'ci' => '123456789',
             'nombre' => 'Juan Pérez',
             'email' => 'juan@example.com',
             'fecha_nacimiento' => '1990-05-20',
+            'user_id' => $user-> id, // Crear y asignar un usuario
         ];
 
         // Crear persona

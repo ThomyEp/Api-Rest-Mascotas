@@ -12,6 +12,11 @@ class PersonasRepository
         return Persona::all();
     }
 
+    public function getAll()
+    {
+        return Persona::all();
+    }
+
     public function find($id)
     {
         return Persona::find($id);

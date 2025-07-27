@@ -30,11 +30,14 @@ class PersonasRepositoryTest extends TestCase
     {
         $repo = new PersonasRepository();
 
+        $user = \App\Models\User::factory()->create(); // Crear un usuario para asignar
+
         $data = [
             'ci' => '12345678',
             'nombre' => 'Juan Pérez',
             'email' => 'juan@example.com',
-            'fecha_nacimiento' => '1990-01-01'
+            'fecha_nacimiento' => '1990-01-01',
+             'user_id' => $user->id,  // Asignar user_id obligatorio
         ];
 
         $persona = $repo->create($data);
